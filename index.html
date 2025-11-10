@@ -28,6 +28,26 @@
 
         <button class="gradient-btn">Contact Me</button>
 
+
+         <!-- HAMBURGER ICON -->
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="nav-links" id="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button class="gradient-btn">Hire Me</button>
+    </div>
+
+
     </header>
 
     <section class="home" id="home">
@@ -75,7 +95,7 @@
 
         <div class="about-content">
             <h2>About <span>Me</span></h2>
-            My name is Dominic Chinonso Divine Favour , i am 17, i am the first child of my family. <br>
+          <p style="margin-bottom: 50px;font-size: 30px;">  My name is Dominic Chinonso Divine Favour , i am 17, i am the first child of my family. <br>
                  I am a unique individual with a passion for learning and growth, <br>
                 i have a way of approching challenges with creativity and presistance, 
                  which helps me navigate obsatcles and achieve my goals. <br>
@@ -84,7 +104,7 @@
                 and creativity, my passsion to me a pharamcist, gives me more encourangement to learn more, <br>
                  in other to achieve that goal,i have had the opportuniyty to expole various interests and hobbies, <br>
                   Thanks to my Parent who are always there to provid and care for me .</p>
-              <a href="#" class="btn">Read More</a>
+              <a href="#" style="margin-bottom: 30px;" class="btn ">Read More</a>
         </div>
 
     </section>
@@ -97,14 +117,8 @@
             <div class="services-box">
                 <div class="service-info">
                     <i class="bx bxl-figma"></i>
-                    <h4>UI / UX Design</h4>
-                    <p>Lorem ipsum dolor sit, amet 
-                    consectetur adipisicing elit. <br>
-                    Dolorem dicta ad neque veritatis.
-                    Magni ducimus odit repellat est,<br>
-                    id quaerat laudantium nihil optio 
-                    eveniet praesentium eaque aspernatur <br>
-                    sunt veniam molestiae?</p>
+                    <h4 style="font-size: 40px;">UI / UX Design</h4>
+                    <p style="font-size: 20px;">Am i Ui /Ux Designer </p>
                 </div>
             </div>
         </div>
@@ -113,14 +127,8 @@
             <div class="services-box">
                 <div class="service-info">
                     <i class="bx bxl-code"></i>
-                    <h4>Frontend Developer</h4>
-                    <p>Lorem ipsum dolor sit, amet 
-                    consectetur adipisicing elit. <br>
-                    Dolorem dicta ad neque veritatis.
-                    Magni ducimus odit repellat est,<br>
-                    id quaerat laudantium nihil optio 
-                    eveniet praesentium eaque aspernatur <br>
-                    sunt veniam molestiae?</p>
+                    <h4 style="font-size: 40px;">Frontend Developer</h4>
+                    <p style="font-size: 20px;">I Design Beautiful Front End website</p>
                 </div>
             </div>
         </div>
@@ -128,15 +136,9 @@
         <div class="services-box">
             <div class="services-box">
                 <div class="service-info">
-                    <i class="bx bxl-code-curly"></i>
-                    <h4>Backend Developer</h4>
-                    <p>Lorem ipsum dolor sit, amet 
-                    consectetur adipisicing elit. <br>
-                    Dolorem dicta ad neque veritatis.
-                    Magni ducimus odit repellat est,<br>
-                    id quaerat laudantium nihil optio 
-                    eveniet praesentium eaque aspernatur <br>
-                    sunt veniam molestiae?</p>
+                    <i style="width: 50px; height: 50px;" class="bx bxl-code-curly"></i>
+                    <h4 style="font-size: 40px;">Backend Developer</h4>
+                    <p style="font-size: 20px;">Am a Backend Deginer</p>
                 </div>
             </div>
         </div>
@@ -226,7 +228,7 @@
     </section>
 
     <footer>
-        <div class="social-icons">
+        <div style="margin-bottom: 20px;" class="social-icons">
                     <a href="#">
                         <i class="bx bxl-github"></i>
                     </a>
@@ -272,5 +274,23 @@
     </footer>
     
     <script src="script.js"></script>
+
+     <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

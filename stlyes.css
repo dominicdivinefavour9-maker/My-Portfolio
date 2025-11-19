@@ -313,6 +313,7 @@ body {
     border-radius: 10px;
     color: #fff;
     font-size: 16px;
+    margin-bottom:20px;
 }
 
 .contact input::placeholder, .contact textarea::placeholder {

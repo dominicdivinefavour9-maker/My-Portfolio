@@ -332,6 +332,34 @@ body {
 }
 
 
+/* Make all inputs and textarea same width */
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Fix spacing */
+.contact form .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Make all labels align left */
+.contact form label {
+    text-align: left;
+    display: block;
+}
+
+
+
+
 .contact input::placeholder, .contact textarea::placeholder {
     color: #aaa;
 }
